@@ -1,0 +1,27 @@
+@import "../../colors.scss";
+
+.row{
+  color: $text_color;
+  display:flex;
+  justify-content: center;
+  .card{
+    width: 60%;
+    aspect-ratio: 16/9;
+    display:flex;
+    background-color: $black;
+    div{
+      width: 50%;
+    }
+    .info{
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+    }
+    .zitat{
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+    }
+  }
+}
