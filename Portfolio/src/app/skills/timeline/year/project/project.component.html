@@ -1,1 +1,16 @@
-<p>project works!</p>
+<div class="projectContainer">
+  <div class="projectHeader">
+    <img src="{{project.picture}}" alt="{{project.name}}">
+</div>
+<div class="projectContent">
+  <div class="projectTitle">{{project.name}}</div>
+  <div class="projectContentText">{{project.content}}</div>
+  <div class="Github">
+    <a href="{{project.github}}" target="_blank" [innerHtml]="project.githubSymbole">
+
+    </a>
+  </div>
+</div>
+</div>
+
+

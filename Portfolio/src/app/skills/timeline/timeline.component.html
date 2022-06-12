@@ -1,3 +1,8 @@
-<div class="container">
-  
+<div class="viewport" #viewport >
+  <div class="yearContainer" [ngStyle]="{'left': leftMover+'px'}" #Container>
+    <app-year *ngFor="let year of years" [year]="year" [renderBroker]="renderBroker"></app-year>
+  </div>
+
+
 </div>
+<input type="range" min="0" max="100" value="0" (change)="moveViewport($event,Container.offsetWidth,viewport.offsetWidth)" (input)="moveViewport($event,Container.offsetWidth,viewport.offsetWidth)">

@@ -1,0 +1,17 @@
+.viewport{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  .yearContainer{
+    position: absolute;
+    margin-right: 2rem;
+    display:flex;
+    flex-direction: row;
+    height:100%;
+    gap: 1rem;
+  }
+
+}
+input{
+  width: 100%;
+}
