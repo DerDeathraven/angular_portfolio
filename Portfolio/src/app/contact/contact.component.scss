@@ -1,0 +1,39 @@
+@import "../../colors.scss";
+.container{
+  height: 30vh;
+  width: 100vw;
+  color: $text_color;
+  background-color:$black;
+  display: flex;
+  justify-content:center;
+
+  .innerContainer{
+    padding: 10px;
+    width: 60vw;
+    @media screen and (max-width: 750px){
+      width: 100vw;
+    }
+    display: flex;
+    flex-direction: column;
+    .text{
+      height: 5vh;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .icons{
+      height: 25vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2rem;
+      a{
+        color: $text_color;
+        transition: all 0.2s;
+        &:hover{
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

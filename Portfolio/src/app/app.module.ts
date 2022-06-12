@@ -11,6 +11,7 @@ import { SkillComponent } from './skills/skill-list/skill/skill.component';
 import { TimelineComponent } from './skills/timeline/timeline.component';
 import { YearComponent } from './skills/timeline/year/year.component';
 import { ProjectComponent } from './skills/timeline/year/project/project.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -25,6 +26,7 @@ import { ProjectComponent } from './skills/timeline/year/project/project.compone
     TimelineComponent,
     YearComponent,
     ProjectComponent,
+    ContactComponent,
 
 
   ],
