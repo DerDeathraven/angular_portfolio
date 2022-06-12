@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="name">
+    <div class="innerName">
+      {{skill.name}}
+    </div>
+
+  </div>
+  <div class="timelineContainer">
+    <div class="timeline">
+      <div class="leftbar timebar" [ngStyle]="{'width': leftWidth+'%'}"></div>
+      <div class="rightbar timebar" [ngStyle]="{'width': rightWidth+'%'}"></div>
+    </div>
+  </div>
+
+
+  <div class="timelineText">
+    <div  *ngFor="let year of yearArr " [ngStyle]="{'width': timelineScaleFactor+'%'}" class="year">
+      <div class="pointerOuter"  [ngClass]="year.render ? '':'hidden'">
+        <div class="pointerInner">
+
+        </div>
+      </div>
+       <span [ngClass]="year.render ? '':'hidden'"> {{year.year}} </span>
+    </div>
+
+  </div>
+
+</div>
