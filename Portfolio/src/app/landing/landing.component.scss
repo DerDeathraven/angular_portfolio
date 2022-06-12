@@ -4,6 +4,7 @@
   display:flex;
   height: 100vh;
   width: 100vw;
+
   .text{
     width: 50vw;
     background-color: $secondary;
@@ -15,5 +16,19 @@
   .picture{
     width: 50vw;
     background-color:$primary;
+  }
+  @media (max-width: 750px){
+    .text{
+      width: 100vw;
+      background-color: $secondary;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+    .picture{
+      width: 0vw;
+      background-color:$primary;
+    }
   }
 }

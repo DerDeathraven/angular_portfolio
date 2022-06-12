@@ -1,15 +1,21 @@
 @import "../../../../../colors.scss";
 .projectContainer{
   height: 95%;
-
+  border-radius: 10px;
   background-color: $black;
+  &.clickable{
+    background-color:lighten($secondary,10);
+    cursor:pointer;
+  }
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   .projectHeader{
-    padding-top: 5px;
+    padding: 0.4rem;
+    padding-bottom: 0;
 
     img{
+
       object-fit:cover;
       aspect-ratio:16/9;
       width:100%;

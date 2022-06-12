@@ -1,6 +1,6 @@
 <div class="viewport" #viewport >
   <div class="yearContainer" [ngStyle]="{'left': leftMover+'px'}" #Container>
-    <app-year *ngFor="let year of years" [year]="year" [renderBroker]="renderBroker"></app-year>
+    <app-year *ngFor="let year of years" [year]="year" [renderBroker]="renderBroker" [activeProject]="activeProject"></app-year>
   </div>
 
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import {Subject} from 'rxjs';
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TimelineComponent implements OnInit {
   @Input() renderBroker:any
+  activeProject = new Subject()
   defaultYears = [
     {
     year: 2014,
@@ -69,7 +70,7 @@ export class TimelineComponent implements OnInit {
           name: "Final batch chat",
           github: "https://github.com/DerDeathraven/Batchchat",
           content: "Using my new developed skill in web-development, I wanted to redo my chat program. I used a HTML frontend to smooth up the user experience.",
-          picture: "/images/Batchchat.png",
+          picture: "https:/jlcd.de/images/Batchchat.png",
           releatedSkills:[
             "Bash/Batch",
             "JavaScript",
@@ -81,7 +82,7 @@ export class TimelineComponent implements OnInit {
             github: "https://www.webspezi.com/de/",
             content: "Starting to work for my mom. Work such as: on-side customer service, setting up maschines, training with elderly",
             githubSymbole: '<i class="fa-solid fa-link"></i>',
-            picture: "/images/20_Jahre_webspezi.png"
+            picture: "https:/jlcd.de/images/20_Jahre_webspezi.png"
          }
 
 
@@ -96,21 +97,21 @@ export class TimelineComponent implements OnInit {
           github: "https://kunst.breede.sh/kunstwerke/0",
           content: "A school project in which I took on me the role of managment and keeping the big picture. ",
           githubSymbole:'<i class="fa-solid fa-link"></i>',
-          picture: "/images/bbz.png"
+          picture: "https:/jlcd.de/images/bbz.png"
          },
          {
             name: " Abitur ",
             github: "http://www.bbz-se.de/verabschiedung-der-abiturientinnen/",
             content: "A technical school simlar to college. This school allowed to choose a main course out of various classes. This course was part of the Abitur exams. I chose environment development",
             githubSymbole:'<i class="fa-solid fa-graduation-cap"></i>',
-            picture: "/images/BG-T18.jpg"
+            picture: "https:/jlcd.de/images/BG-T18.jpg"
         },
          {
             name: "IT-Security",
             github: "https://www.uni-luebeck.de/universitaet/universitaet.html",
             content: "Starting my studies and extending my knowledge of JS in the background",
             githubSymbole:'<i class="fa-solid fa-link"></i>',
-            picture: "/images/csm_Eingang-UNI-Studenten_CORP_Rene-Kube_IMG_6016_neu_97e9451734.jpg"
+            picture: "https:/jlcd.de/images/csm_Eingang-UNI-Studenten_CORP_Rene-Kube_IMG_6016_neu_97e9451734.jpg"
         },
 
 
@@ -125,14 +126,14 @@ export class TimelineComponent implements OnInit {
             github: "https://www.hako.com/en/",
             content: "Working on robotic sweepingmaschines. Being treated as a full member and not a intern right alongside senior-devs",
             githubSymbole:'<i class="fa-solid fa-link"></i>',
-            picture: "/images/Termine_Header.jpg",
+            picture: "https:/jlcd.de/images/Termine_Header.jpg",
         },
         {
             name: "StreamPipe",
             github: "https://www.hako.com/en/",
             content: "Developing a full-fledged ROS-Bag analytic-suite. Marking Timestamps, Adding comments and exporting them as PDF. Built with Nodejs and Socket.io.",
             githubSymbole:'<i class="fa-solid fa-lock"></i>',
-            picture: "/images/csm_Eingang-UNI-Studenten_CORP_Rene-Kube_IMG_6016_neu_97e9451734.jpg",
+            picture: "https:/jlcd.de/images/csm_Eingang-UNI-Studenten_CORP_Rene-Kube_IMG_6016_neu_97e9451734.jpg",
             releatedSkills:[
                 "NodeJS",
                 "JavaScript",
@@ -146,7 +147,7 @@ export class TimelineComponent implements OnInit {
             name: "Threejs Smarthome",
             github: "https://github.com/DerDeathraven/threejs_smarthome_control",
             content: "This NodeJS Project uses MQTT and Socket.io to render the status of your smarthome devices in realtime and 3D",
-            picture: "/images/screenshot_Smarthome.png",
+            picture: "https:/jlcd.de/images/screenshot_Smarthome.png",
             releatedSkills:[
                 "NodeJS",
                 "JavaScript",
@@ -166,19 +167,20 @@ export class TimelineComponent implements OnInit {
         {
             name: "Stable Portfolio",
             github: "https://github.com/DerDeathraven/jlcd",
-            content: "My spin on a modern website similar to what you can find on many websites",
-            picture: "/images/schonwieder_ich.JPG",
+            content: "My spin on a modern website similar to what you can find on many websites. This time build with Angular",
+            picture: "https:/jlcd.de/images/schonwieder_ich.JPG",
             releatedSkills:[
                 "JavaScript",
                 "<HTML/CSS>",
-                "JQuery"
+                "JQuery",
+                "Angular"
             ]
            },
            {
             name: "Experimental Portfolio",
             github: "https://github.com/DerDeathraven/jlcd",
             content: "Using Three.js and CSS3D. This developed out of a weekend of learning 3D programming inside of a browser.",
-            picture: "/images/Bewerbungsfoto.jpg",
+            picture: "https:/jlcd.de/images/Bewerbungsfoto.jpg",
             releatedSkills:[
                 "JavaScript",
                 "<HTML/CSS>",
@@ -196,6 +198,7 @@ export class TimelineComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.activeProject.next("")
   }
   moveViewport(event:any,containerWidth:number,viewportWidth:number){
    var value   = event.target.value / 100;

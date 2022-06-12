@@ -3,7 +3,12 @@
     {{year.year}}
   </div>
   <div class="projects">
-    <app-project *ngFor="let project of year.projects" [project]="project" class="project" (click)="updateSkills(project.releatedSkills)"></app-project>
+    <app-project
+     *ngFor="let project of year.projects;let i = index" [project]="project"
+     class="project" (click)="updateSkills(project.releatedSkills,project.name)"
+     [ngClass]="activeProjectName == project.name ? 'active':''"
+
+     ></app-project>
   </div>
 
 </div>

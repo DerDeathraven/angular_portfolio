@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding-right: 10px;
   .name{
     .innerName{
       width:93%;
@@ -33,7 +34,7 @@
           background-color:$secondary;
         }
         &.leftbar{
-          background-color: $black;
+          background-color: lighten($primary,10);
         }
       }
 
@@ -52,13 +53,14 @@
       display: flex;
       flex-direction: column;
       .pointerOuter{
+        margin-top: 0.1rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
         height: 30%;
         .pointerInner{
-          width: 10%;
-          background-color:$black;
+          width: 6%;
+          background-color:lighten($primary,10);;
         }
       }
       span{

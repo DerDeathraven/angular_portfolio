@@ -11,6 +11,7 @@ export class ProjectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.project.githubSymbole = this.project.githubSymbole || '<i class="fa-brands fa-github-square"></i>'
   }
 
 }

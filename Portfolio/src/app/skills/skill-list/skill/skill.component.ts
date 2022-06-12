@@ -51,7 +51,7 @@ export class SkillComponent implements OnInit {
       }
       this.yearArr.push(yearObj)
     }
-    console.log(this.yearArr)
+
 
     if(this.skill.startDate == this.currentYear - 1){
       this.yearArr.at(-1).render = false

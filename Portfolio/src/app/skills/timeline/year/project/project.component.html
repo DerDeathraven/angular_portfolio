@@ -1,4 +1,4 @@
-<div class="projectContainer">
+<div class="projectContainer" [ngClass]="project.releatedSkills == undefined ? '':'clickable'">
   <div class="projectHeader">
     <img src="{{project.picture}}" alt="{{project.name}}">
 </div>

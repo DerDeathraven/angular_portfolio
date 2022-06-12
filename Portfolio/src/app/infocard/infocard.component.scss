@@ -23,5 +23,12 @@
       flex-direction: column;
       justify-content:center;
     }
+
+  }
+  @media (max-width: 750px){
+    .card{
+      width: 90%;
+      font-size: 0.8rem;
+    }
   }
 }

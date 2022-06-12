@@ -55,6 +55,10 @@ export class SkillListComponent implements OnInit {
         "name":"ROS",
         "startDate":2021,
     },
+    {
+      "name":"Angular",
+      "startDate":2021,
+  },
 
 
     ]
