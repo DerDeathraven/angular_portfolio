@@ -1,0 +1,25 @@
+@import "../../../colors.scss";
+.viewport{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  @media (max-width: 750px) {
+    overflow-x: scroll;
+  }
+  .yearContainer{
+    position: absolute;
+    margin-right: 2rem;
+    display:flex;
+    flex-direction: row;
+    height:100%;
+    gap: 1rem;
+  }
+
+}
+input{
+  accent-color: $secondary;
+  width: 100%;
+  @media (max-width: 750px) {
+    display: none;
+  }
+}

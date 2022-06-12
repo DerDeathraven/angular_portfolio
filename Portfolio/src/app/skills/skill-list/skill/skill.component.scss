@@ -1,0 +1,76 @@
+@import "/src/_colors.scss";
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-right: 10px;
+  .name{
+    .innerName{
+      width:93%;
+      font-size: 0.8rem;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    height: 33%;
+
+  }
+  .timelineContainer{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    height: 0.5rem;
+
+    .timeline{
+      display: flex;
+      flex-direction:row;
+      justify-content: center;
+      height: 0.5rem;
+      width:93%;
+
+      .timebar{
+        height:100%;
+        &.rightbar{
+          background-color:$secondary;
+        }
+        &.leftbar{
+          background-color: lighten($primary,10);
+        }
+      }
+
+    }
+  }
+
+  .timelineText{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    height: 50%;
+
+
+
+    .year{
+      display: flex;
+      flex-direction: column;
+      .pointerOuter{
+        margin-top: 0.1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 30%;
+        .pointerInner{
+          width: 6%;
+          background-color:lighten($primary,10);;
+        }
+      }
+      span{
+        height: 50%;
+        font-size: 0.70rem;
+      }
+      .hidden{
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../../../colors.scss";
+.year{
+  position: relative;
+  display: flex;
+  flex-direction:column;
+  height:100%;
+  background-color: $primary;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+  .header{
+    height:10%;
+    font-size: 1.2rem;
+    text-align:center;
+  }
+  .projects{
+    position: relative;
+    height: 90%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    .project{
+      height:100%;
+      width: 200px;
+      transition: all 0.2s;
+      &.active{
+        transform: scale(1.03);
+      }
+      &:hover{
+        transform: scale(1.02);
+        &.active{
+          transform: scale(1.03);
+        }
+      }
+
+    }
+
+  }
+}
